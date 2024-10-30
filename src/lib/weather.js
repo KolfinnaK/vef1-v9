@@ -53,28 +53,27 @@ function parseResponse(data) {
  * @returns {Promise<Array<Forecast>>} Fylki af spám fyrir staðsetningu.
  */
 export async function weatherSearch(lat, lng) {
-  await sleep(1000);
-  // Querystring sem við viljum senda með leit
-  // latitude={lat}&longitude={lng}}&hourly=temperature_2m,precipitation&timezone=GMT&forecast_days=1
+  await sleep(1000); // Adds a 1-second delay to simulate loading state
 
-  // TODO útfæra
-  // Hér ætti að nota URL og URLSearchParams
+  // Use URL and URLSearchParams to set up the API call
   const url = new URL(API_URL);
   const querystring = new URLSearchParams({
     latitude: lat.toString(),
     longitude: lng.toString(),
     hourly: 'temperature_2m,precipitation',
     forecast_days: '1',
+    timezone: 'GMT', // Ensure data is in GMT timezone
   });
   url.search = querystring.toString();
+
+  console.log(url.href); // Check the constructed URL
 
   const response = await fetch(url.href);
 
   if (response.ok) {
     const data = await response.json();
-
-    return parseResponse(data);
+    return parseResponse(data); // Parse the response and return formatted data
   }
 
-  return [];
+  return []; // Return empty array if the request fails
 }

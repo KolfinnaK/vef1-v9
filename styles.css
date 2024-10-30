@@ -76,7 +76,10 @@ main {
 }
 
 .forecast {
-  border-spacing: 0;
+  /*border-spacing: 0;*/
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--spacing);
 }
 
 .forecast th,
@@ -86,5 +89,27 @@ main {
 }
 
 .forecast tbody tr:nth-child(2n + 1) {
-  background-color: var(--color-background-zebra);
+  background-color: var(--color-background-zebra); /* Zebra striping */
 }
+
+.forecast tbody tr:nth-child(even) {
+  background-color: #ffffff; /* White for even rows */
+}
+
+.weather h1 {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.results__header {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.results__location {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
