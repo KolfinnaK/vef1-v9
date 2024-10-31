@@ -6,7 +6,6 @@
     "copy:html": "cpy ./*.html ./build/",
     "copy:css": "cpy ./*.css ./build/",
     "copy:js": "cpy ./src ./build/src",
-    "copy:lib": "cpy ./lib ./build/lib",
     "build": "concurrently \"npm:copy:*\"",
     "lint": "eslint ./src",
     "prettier": "prettier --write ."
