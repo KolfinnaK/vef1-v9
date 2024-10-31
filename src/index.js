@@ -1,3 +1,4 @@
+/*index.js*/
 /**
  * Gefið efni fyrir verkefni 9, ekki er krafa að nota nákvæmlega þetta en nota
  * verður gefnar staðsetningar.

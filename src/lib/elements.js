@@ -1,3 +1,4 @@
+/*elements.js*/
 /**
  * Býr til element með nafni og bætir við öðrum elementum eða texta nóðum.
  * @param {string} name Nafn á elementi
