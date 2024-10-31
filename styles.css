@@ -89,11 +89,11 @@ main {
 }
 
 .forecast tbody tr:nth-child(2n + 1) {
-  background-color: var(--color-background-zebra); /* Zebra striping */
+  background-color: var(--color-background-zebra);
 }
 
 .forecast tbody tr:nth-child(even) {
-  background-color: #ffffff; /* White for even rows */
+  background-color: #ffffff;
 }
 
 .weather h1 {
